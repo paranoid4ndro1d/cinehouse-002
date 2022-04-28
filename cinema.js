@@ -16,4 +16,16 @@ function listarFilmesEmCartaz(filmes){
   return filmes.filter((filme) => filme.emCartaz);
 }
 
-console.log(listarFilmesEmCartaz(catalogoObj.data));
+//console.log(listarFilmesEmCartaz(catalogoObj.data));
+
+function alterarStatusEmCartaz(id, filmes){
+  const idxFilme = filmes.findIndex(filme => filme.codigo === id);
+  if(idxFilme >= 0){
+    filmes[idxFilme].emCartaz = !filmes[idxFilme].emCartaz;
+    return true;
+  }//else {
+   // return false
+  //}
+}
+//console.log(alterarStatusEmCartaz(1,catalogoObj.data))
+//console.log(catalogoObj.data)
